@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-burgundy-700 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-burgundy-800 active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-burgundy-200 bg-white px-5 py-2.5 text-sm font-medium text-burgundy-700 transition-all hover:bg-burgundy-50 active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-champagne-500 px-5 py-2.5 text-sm font-medium text-charcoal shadow-sm transition-all hover:bg-champagne-600 hover:text-white active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-charcoal/70 transition-all hover:bg-burgundy-50 hover:text-burgundy-700;
+  }
+
+  .card {
+    @apply rounded-2xl border border-burgundy-100/60 bg-white shadow-sm transition-shadow;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border border-burgundy-100 bg-white px-3.5 py-2.5 text-sm text-charcoal placeholder-charcoal/40 transition-all focus:border-burgundy-300 focus:outline-none focus:ring-2 focus:ring-burgundy-100;
+  }
+
+  .label-field {
+    @apply mb-1.5 block text-sm font-medium text-charcoal/80;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #f5e0e6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e9c2cf;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
